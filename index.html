@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExamDesk</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:#333;line-height:1.6}
+header{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:14px 6%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.logo{font-size:1.4rem;font-weight:700;color:#1e1b4b}
+.logo span{color:#4f46e5}
+nav a{margin-left:16px;text-decoration:none;color:#333;font-weight:600}
+.hero{text-align:center;color:#fff;padding:90px 6%;background:linear-gradient(135deg,#4f46e5,#1e1b4b)}
+.hero h1{font-size:2.2rem;margin-bottom:14px}
+.hero p{margin-bottom:24px}
+.btn{display:inline-block;padding:12px 28px;border:0;border-radius:8px;background:#fff;color:#4f46e5;font-weight:700;text-decoration:none}
+.section{padding:60px 6%;text-align:center}
+.alt{background:#f5f6fb}
+h2{margin-bottom:22px;color:#1e1b4b}
+.cards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:#fff;padding:26px 18px;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.card span{font-size:2.2rem}
+form{max-width:480px;margin:auto;display:flex;flex-direction:column;gap:12px}
+input,textarea{padding:12px;border:1px solid #ccc;border-radius:8px;font:inherit}
+form .btn{background:#4f46e5;color:#fff}
+footer{background:#1e1b4b;color:#fff;text-align:center;padding:22px 6%}
+footer a{color:#c7d2fe}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Exam<span>Desk</span></div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Prepare Smarter.<br>Score Better.</h1>
+  <p>Notes, past papers and practice tests in one place.</p>
+  <a href="#features" class="btn">Explore Features</a>
+</section>
+
+<section class="section" id="about">
+  <h2>About the Project</h2>
+  <p>Yahan apne project ke baare mein 3-4 lines likhein.</p>
+</section>
+
+<section class="section alt" id="features">
+  <h2>Features</h2>
+  <div class="cards">
+    <div class="card"><span>📚</span><h3>Study Notes</h3><p>Short description.</p></div>
+    <div class="card"><span>📝</span><h3>Past Papers</h3><p>Short description.</p></div>
+    <div class="card"><span>⏱️</span><h3>Practice Tests</h3><p>Short description.</p></div>
+    <div class="card"><span>📈</span><h3>Progress Tracking</h3><p>Short description.</p></div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <form id="f">
+    <input type="text" placeholder="Your name" required>
+    <input type="email" placeholder="Your email" required>
+    <textarea rows="4" placeholder="Your message" required></textarea>
+    <button class="btn" type="submit">Send</button>
+    <p id="m" style="color:green"></p>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Iqra Azeem · BS Mathematics, BZU Multan</p>
+  <p><a href="https://www.linkedin.com/in/iqra-azeem-601456363">LinkedIn</a></p>
+</footer>
+
+<script>
+document.getElementById("f").addEventListener("submit",function(e){
+  e.preventDefault();
+  document.getElementById("m").textContent="Thanks! Message received.";
+  e.target.reset();
+});
+</script>
+</body>
+  </html>
