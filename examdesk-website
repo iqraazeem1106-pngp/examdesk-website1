@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExamDesk – Online Examination Management System</title>
+<style>
+:root{--navy:#0b2a6f;--blue:#1d4ed8;--light:#eef4ff;--tile:#e3edff;--line:#bcd4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",Arial,sans-serif;color:#1b2559;background:var(--light);line-height:1.6}
+[hidden]{display:none!important}
+header{position:sticky;top:0;z-index:5;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:10px 5%;gap:8px}
+.logo{font-size:1.5rem;font-weight:800;color:var(--navy);text-decoration:none}
+.logo span{color:var(--blue)}
+nav a{margin-left:16px;text-decoration:none;color:var(--navy);font-weight:600}
+.hero{background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;text-align:center;padding:80px 5%}
+.hero h1{font-size:2.6rem;line-height:1.15}
+.hero h2{font-size:1.2rem;font-weight:600;margin:10px 0 18px;color:#dbe7ff}
+.tag{display:inline-block;background:#cfe3ff;color:var(--navy);font-weight:700;border-radius:30px;padding:6px 22px;margin-bottom:26px}
+.btn{display:inline-block;border:0;border-radius:8px;background:var(--blue);color:#fff;font:inherit;font-weight:700;padding:11px 24px;cursor:pointer;text-decoration:none}
+.btn.w{background:#fff;color:var(--navy)}
+.btn.o{background:#fff;color:var(--navy);border:2px solid var(--line)}
+section{padding:60px 5%}
+h2.t{text-align:center;color:var(--navy);font-size:2rem;margin-bottom:26px}
+.wrap{max-width:980px;margin:auto}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card{background:var(--tile);border:2px solid var(--line);border-radius:14px;padding:20px;text-align:center;font-weight:700;color:var(--navy)}
+.box{background:#fff;border:2px solid var(--line);border-radius:16px;padding:22px}
+.box h3{color:var(--navy);margin-bottom:10px}
+.box li{margin-left:20px}
+.tabs{display:flex;gap:10px;justify-content:center;margin-bottom:16px}
+.tabs .btn{background:#fff;color:var(--navy);border:2px solid var(--line)}
+.tabs .btn.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+label{display:block;font-weight:600;margin:12px 0 4px;color:var(--navy)}
+input,select,textarea{width:100%;padding:10px;border:1px solid #9db6e6;border-radius:8px;font:inherit}
+.bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;color:var(--navy)}
+#timer{background:var(--navy);color:#fff;border-radius:8px;padding:4px 14px;font-weight:700}
+.qn{color:#33406e;font-size:.95rem}
+.opt{display:block;width:100%;text-align:left;background:#fff;border:2px solid var(--line);border-radius:10px;padding:11px 14px;margin:8px 0;font:inherit;cursor:pointer;color:#1b2559}
+.opt.sel{background:var(--blue);border-color:var(--blue);color:#fff}
+#pal{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+#pal button{width:40px;height:40px;border-radius:8px;border:2px solid var(--line);background:#fff;font-weight:700;color:var(--navy);cursor:pointer}
+#pal .done{background:var(--tile)}
+#pal .cur{border-color:var(--navy);background:var(--navy);color:#fff}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.score{font-size:2.2rem;font-weight:800;color:var(--blue)}
+.rv{border-left:5px solid;padding:8px 12px;margin:10px 0;background:#fff;border-radius:6px}
+.ok{border-color:#15803d}.no{border-color:#b91c1c}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th,td{padding:8px;border-bottom:1px solid var(--line);text-align:left}
+footer{background:var(--navy);color:#fff;text-align:center;padding:26px 5%}
+footer a{color:#c7d9ff}
+@media(max-width:600px){.hero h1{font-size:2rem}nav a{margin-left:10px}}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="#home" class="logo">Exam<span>Desk</span></a>
+  <nav><a href="#features">Features</a><a href="#demo">Demo</a><a href="#about">About</a></nav>
+</header>
+
+<div class="hero" id="home">
+  <h1>ExamDesk</h1>
+  <h2>Online Examination Management System</h2>
+  <div class="tag">Take Exams Smarter, Not Harder!</div><br>
+  <a href="#demo" class="btn w">Try Demo Exam</a>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <h2 class="t">My Product</h2>
+    <p style="text-align:center;font-size:1.1rem;max-width:720px;margin:auto">ExamDesk is an online platform that helps teachers conduct exams and allows students to take tests easily with instant results.</p>
+  </div>
+</section>
+
+<section id="features" style="background:#fff">
+  <div class="wrap">
+    <h2 class="t">Key Features</h2>
+    <div class="grid">
+      <div class="card">Online Exam Creation</div>
+      <div class="card">Multiple Question Types</div>
+      <div class="card">Automatic Timer</div>
+      <div class="card">Automatic Submission</div>
+      <div class="card">Instant Results</div>
+      <div class="card">Question Navigation</div>
+      <div class="card">Answer Review</div>
+      <div class="card">Digital Result Records</div>
+    </div>
+  </div>
+</section>
+
+<section id="demo">
+  <div class="wrap">
+    <h2 class="t">Try ExamDesk</h2>
+    <div class="tabs">
+      <button class="btn on" id="tabS">Student</button>
+      <button class="btn" id="tabT">Teacher</button>
+    </div>
+
+    <!-- STUDENT -->
+    <div class="box" id="pS">
+      <div id="sSetup">
+        <h3>Take an Exam</h3>
+        <label for="sName">Your name</label>
+        <input id="sName" placeholder="e.g. Ayesha">
+        <label for="examSel">Choose exam</label>
+        <select id="examSel"></select>
+        <div class="row"><button class="btn" id="startBtn">Start Exam &rarr;</button></div>
+      </div>
+      <div id="sExam" hidden>
+        <div class="bar"><strong id="eTitle"></strong><span id="timer">00:00</span></div>
+        <div id="qBox"></div>
+        <div id="pal"></div>
+        <div class="row">
+          <button class="btn o" id="prev">Previous</button>
+          <button class="btn o" id="next">Next</button>
+          <button class="btn" id="submitBtn">Submit</button>
+        </div>
+      </div>
+      <div id="sResult" hidden></div>
+    </div>
+
+    <!-- TEACHER -->
+    <div class="box" id="pT" hidden>
+      <h3>Create an Exam</h3>
+      <label for="tTitle">Exam title</label>
+      <input id="tTitle" placeholder="e.g. Calculus Quiz 1">
+      <label for="tMins">Duration (minutes)</label>
+      <input id="tMins" type="number" min="1" value="5">
+      <label for="qText">Question</label>
+      <textarea id="qText" rows="2"></textarea>
+      <label for="o0">Option A</label><input id="o0">
+      <label for="o1">Option B</label><input id="o1">
+      <label for="o2">Option C</label><input id="o2">
+      <label for="o3">Option D</label><input id="o3">
+      <label for="cor">Correct answer</label>
+      <select id="cor"><option value="0">A</option><option value="1">B</option><option value="2">C</option><option value="3">D</option></select>
+      <div class="row">
+        <button class="btn o" id="addQ">Add Question</button>
+        <button class="btn" id="saveExam">Save Exam</button>
+      </div>
+      <p id="tMsg" style="margin-top:10px;font-weight:600"></p>
+      <h3 style="margin-top:18px">Your Exams</h3>
+      <div id="exList"></div>
+    </div>
+
+    <div class="box" style="margin-top:20px">
+      <h3>Digital Result Records</h3>
+      <div id="records"></div>
+      <div class="row"><button class="btn o" id="clearRec">Clear Records</button></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff">
+  <div class="wrap grid">
+    <div class="box"><h3>Why ExamDesk?</h3><ul><li>Saves Time</li><li>Reduces Paper Work</li><li>Minimizes Errors</li><li>Makes Exam Management Easy</li></ul></div>
+    <div class="box"><h3>Who Can Use It?</h3><ul><li>Teachers</li><li>Students</li><li>Schools &amp; Universities</li></ul></div>
+    <div class="box"><h3>Future Plans</h3><ul><li>Student &amp; Teacher Accounts</li><li>Advanced Analytics</li><li>Downloadable Reports</li><li>AI-Based Question Generation</li></ul></div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>ExamDesk – Your Smart Partner in Education</strong></p>
+  <p>© 2026 Iqra Azeem · BS Mathematics, BZU Multan ·
+  <a href="https://www.linkedin.com/in/iqra-azeem-601456363" target="_blank" rel="noopener">LinkedIn</a></p>
+</footer>
+
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const load=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}};
+const save=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+
+const sample=[{title:"Sample Quiz: General",mins:2,qs:[
+{q:"What is 12 × 8?",o:["86","96","108","112"],a:1},
+{q:"What is the capital of Pakistan?",o:["Karachi","Lahore","Islamabad","Multan"],a:2},
+{q:"HTML stands for?",o:["Hyper Text Markup Language","High Text Machine Language","Hyper Tool Multi Language","None of these"],a:0},
+{q:"What is the derivative of x²?",o:["x","2x","x²","2"],a:1},
+{q:"Which of these is a programming language?",o:["HTTP","HTML","Python","URL"],a:2},
+{q:"What is the value of 7² + 3²?",o:["40","49","58","64"],a:2},
+{q:"CSS is used for?",o:["Styling web pages","Storing databases","Sending emails","Compiling code"],a:0},
+{q:"Which symbol starts a single-line comment in Python?",o:["//","#","<!--","/*"],a:1},
+{q:"What is the square root of 144?",o:["10","12","14","16"],a:1},
+{q:"Who is the founder of Pakistan?",o:["Muhammad Ali Jinnah","Liaquat Ali Khan","Allama Iqbal","Sir Syed Ahmad Khan"],a:0}]}];
+
+let exams=load("ed_exams2",sample), results=load("ed_results",[]);
+let draft=[], E=null, i=0, ans=[], end=0, tm=null;
+
+/* tabs */
+function tab(s){$("pS").hidden=!s;$("pT").hidden=s;$("tabS").classList.toggle("on",s);$("tabT").classList.toggle("on",!s)}
+$("tabS").onclick=()=>tab(true);$("tabT").onclick=()=>tab(false);
+
+/* lists */
+function drawExams(){
+  $("examSel").innerHTML=exams.map((e,k)=>`<option value="${k}">${esc(e.title)} (${e.qs.length} Q, ${e.mins} min)</option>`).join("");
+  $("exList").innerHTML=exams.map((e,k)=>`<p>${esc(e.title)} – ${e.qs.length} questions <button class="btn o" data-del="${k}" style="padding:3px 10px">Delete</button></p>`).join("")||"<p>No exams yet.</p>";
+}
+function drawRecords(){
+  $("records").innerHTML=results.length?`<div style="overflow-x:auto"><table><tr><th>Name</th><th>Exam</th><th>Score</th><th>Date</th></tr>${results.slice(-10).reverse().map(r=>`<tr><td>${esc(r.n)}</td><td>${esc(r.e)}</td><td>${r.s}/${r.t}</td><td>${esc(r.d)}</td></tr>`).join("")}</table></div>`:"<p>No results yet. Take a demo exam!</p>";
+}
+$("exList").onclick=e=>{const k=e.target.dataset.del;if(k!==undefined){exams.splice(+k,1);save("ed_exams2",exams);drawExams()}};
+$("clearRec").onclick=()=>{results=[];save("ed_results",results);drawRecords()};
+
+/* teacher */
+$("addQ").onclick=()=>{
+  const q=$("qText").value.trim(),o=[0,1,2,3].map(n=>$("o"+n).value.trim());
+  if(!q||o.some(x=>!x)){$("tMsg").textContent="Please fill the question and all 4 options.";return}
+  draft.push({q,o,a:+$("cor").value});
+  ["qText","o0","o1","o2","o3"].forEach(id=>$(id).value="");
+  $("tMsg").textContent="Question added. Total in this exam: "+draft.length;
+};
+$("saveExam").onclick=()=>{
+  const title=$("tTitle").value.trim(),mins=Math.max(1,+$("tMins").value||5);
+  if(!title||!draft.length){$("tMsg").textContent="Add a title and at least one question.";return}
+  exams.push({title,mins,qs:draft});save("ed_exams2",exams);
+  draft=[];$("tTitle").value="";$("tMsg").textContent="Exam saved! Switch to the Student tab to take it.";drawExams();
+};
+
+/* student */
+const fmt=s=>String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");
+$("startBtn").onclick=()=>{
+  if(!exams.length)return;
+  E=exams[+$("examSel").value];i=0;ans=E.qs.map(()=>null);end=Date.now()+E.mins*60000;
+  $("sSetup").hidden=true;$("sResult").hidden=true;$("sExam").hidden=false;$("eTitle").textContent=E.title;
+  clearInterval(tm);tick();tm=setInterval(tick,1000);show();
+};
+function tick(){
+  const left=Math.max(0,Math.round((end-Date.now())/1000));
+  $("timer").textContent=fmt(left);
+  if(left<=0)finish(true);
+}
+function show(){
+  const q=E.qs[i];
+  $("qBox").innerHTML=`<p class="qn">Question ${i+1} of ${E.qs.length}</p><h3>${esc(q.q)}</h3>`+
+    q.o.map((o,j)=>`<button class="opt${ans[i]===j?" sel":""}" data-j="${j}" aria-pressed="${ans[i]===j}">${esc(o)}</button>`).join("");
+  $("pal").innerHTML=E.qs.map((_,k)=>`<button data-k="${k}" class="${k===i?"cur":ans[k]!==null?"done":""}" aria-label="Go to question ${k+1}">${k+1}</button>`).join("");
+}
+$("qBox").onclick=e=>{const b=e.target.closest(".opt");if(b){ans[i]=+b.dataset.j;show()}};
+$("pal").onclick=e=>{const k=e.target.dataset.k;if(k!==undefined){i=+k;show()}};
+$("prev").onclick=()=>{if(i>0){i--;show()}};
+$("next").onclick=()=>{if(i<E.qs.length-1){i++;show()}};
+$("submitBtn").onclick=()=>{
+  const un=ans.filter(a=>a===null).length;
+  if(!un||confirm(un+" question(s) unanswered. Submit anyway?"))finish(false);
+};
+function finish(auto){
+  clearInterval(tm);
+  const s=E.qs.reduce((n,q,k)=>n+(ans[k]===q.a?1:0),0),t=E.qs.length;
+  results.push({n:$("sName").value.trim()||"Student",e:E.title,s,t,d:new Date().toLocaleString()});save("ed_results",results);
+  $("sExam").hidden=true;$("sResult").hidden=false;
+  $("sResult").innerHTML=`<h3>${auto?"Time is up! Exam submitted automatically.":"Exam submitted."}</h3>
+  <p class="score">${s} / ${t} (${Math.round(s/t*100)}%)</p><h3>Answer Review</h3>`+
+  E.qs.map((q,k)=>`<div class="rv ${ans[k]===q.a?"ok":"no"}"><strong>${k+1}. ${esc(q.q)}</strong><br>Your answer: ${ans[k]===null?"Not answered":esc(q.o[ans[k]])}<br>Correct answer: ${esc(q.o[q.a])}</div>`).join("")+
+  `<div class="row"><button class="btn" id="again">Take Another Exam</button></div>`;
+  $("again").onclick=()=>{$("sResult").hidden=true;$("sSetup").hidden=false};
+  drawRecords();
+}
+
+drawExams();drawRecords();
+</script>
+</body>
+</html>
